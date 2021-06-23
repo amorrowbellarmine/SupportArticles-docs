@@ -49,5 +49,5 @@ To resolve this issue, you must configure Azure AD to let AD FS natively handle 
 2. Configure Azure AD to run federated user authentication by using the **prompt=login** behavior. This prevents the user from having to begin a new authentication. For example, run a command such as the following that includes your tenant-specific information:
 
     ```powershell
-    Set-MsolDomainFederationSettings -DomainNameyour_domain_name-PreferredAuthenticationProtocol <current auth setting such as WsFed> -SupportsMfa $True -PromptLoginBehavior NativeSupport
+    Set-MsolDomainFederationSettings -DomainName your_domain_name -PreferredAuthenticationProtocol <current auth setting such as WsFed> -SupportsMfa $True -PromptLoginBehavior NativeSupport
     ```
